@@ -1,0 +1,150 @@
+﻿<div class="row">
+    <div class="col-12 ticket-wrapper">
+        <div class="ticket">
+            <div class="invalid-overlay">INVÁLIDO</div>
+
+            <div class="header">
+                <div class="d-flex gap-1">
+                    <div>
+                        <img src="~/img/veracruz-corazon.png" width="50" height="50" />
+                    </div>
+                    <div style="width: 100%;">
+                        <h1>COMISION DEL AGUA DEL ESTADO DE VERACRUZ</h1>
+                        <p>ABASOLO S/N, COL. CENTRO</br>
+                        CP. 95641, CD ISLA VERACRUZ</br>
+                        RFC. MV580101DL2 TEL. 283 8741183</p>
+                    </div>
+                    <div>
+                        <img src="~/img/caev.png" width="50" height="50" />
+                    </div>
+                </div>
+                <h4 class="my-2">COMPROBANTE DE PAGO</h4>
+            </div>
+
+            <div class="invalid-message">
+                ¡TICKET INVALIDO!
+            </div>
+            
+            <div class="info">
+                <div>Cuenta: ***</div>
+            </div>
+            <div class="info">
+                <div>Fecha: ***</div>
+            </div>
+            <div class="info">
+                <div>Razon Social: ****</div>
+            </div>
+            <div class="total">
+                <div>TOTAL: **** </div>
+            </div>
+            
+            <div class="footer">
+                <p class="h6">Los datos del ticket que quiere consultar son inválidos.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .ticket-wrapper
+    {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        max-width: 100%;
+    }
+
+
+    .ticket {
+        background-color: rgb(252, 246, 246);
+        border: 1px dashed red;
+        padding: 15px;
+        max-width: min(340px, 95%);
+    }
+    .invalid-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        font-size: 40px;
+        font-weight: bold;
+        color: rgba(255, 107, 107, 0.3);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #000;
+        padding-bottom: 10px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 10px;
+    }
+    .header p {
+        margin: 4px 0px;
+        font-size: 9px;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .items {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+    }
+    .items th {
+        text-align: left;
+        border-bottom: 1px dashed #000;
+        padding: 5px 0;
+    }
+    .items td {
+        padding: 3px 0;
+    }
+    .items .qty {
+        text-align: center;
+        width: 20px;
+    }
+    .items .price {
+        text-align: right;
+    }
+    .total {
+        border-top: 1px dashed #000;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding: 30px 0px 0px 0px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 10px;
+        border-top: 1px dashed #000;
+        padding-top: 10px;
+    }
+
+    .footer .hash-lb
+    {
+        font-size: 8px;
+    }
+
+    .invalid-message {
+        background-color: #ffebee;
+        border: 1px solid #ff6b6b;
+        padding: 8px;
+        margin: 10px 0;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 4px;
+        position: relative;
+        z-index: 2;
+    }
+</style>
