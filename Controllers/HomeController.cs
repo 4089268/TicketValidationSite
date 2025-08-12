@@ -22,7 +22,8 @@ public class HomeController : Controller
         [FromQuery] string c,
         [FromQuery] string f,
         [FromQuery] string t,
-        [FromQuery] string h
+        [FromQuery] string h,
+        [FromQuery] string? l
     )
     {
         System.Globalization.CultureInfo.CurrentCulture = new System.Globalization.CultureInfo("es-MX");
@@ -35,6 +36,7 @@ public class HomeController : Controller
             model.Cuenta = int.Parse(c);
             model.Fecha = DateTime.TryParseExact(f, "yyyyMMdd", null, System.Globalization.DateTimeStyles.None, out DateTime d) ? d : throw new ArgumentException("La fecha tiene un formato invalido");
             model.Total = decimal.Parse(t);
+            model.Folio = l ?? "";
             model.Hash = h;
             model.Hash2 = h;
 

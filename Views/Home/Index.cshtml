@@ -7,7 +7,7 @@
             <div class="header">
                 <div class="d-flex gap-1">
                     <div>
-                        <img src="~/img/veracruz-corazon.png" width="50" height="50" />
+                        <img src="~/img/caev.png" width="50" height="50" />
                     </div>
                     <div style="width: 100%;">
                         <h1>COMISION DEL AGUA DEL ESTADO DE VERACRUZ</h1>
@@ -16,7 +16,7 @@
                         RFC. MV580101DL2 TEL. 283 8741183</p>
                     </div>
                     <div>
-                        <img src="~/img/caev.png" width="50" height="50" />
+                        <img src="~/img/veracruz-corazon.png" width="50" height="50" />
                     </div>
                 </div>
                 <h4 class="my-2">COMPROBANTE DE PAGO</h4>
@@ -29,7 +29,10 @@
                 <div>Fecha: @Model.Fecha.ToString("dd/MM/yyyy")</div>
             </div>
             <div class="info">
-                <div>Razon Social: @Model.RazonSocial</div>
+                <div>Folio: @Model.Folio</div>
+            </div>
+            <div class="info">
+                <div>Usuario: @Model.RazonSocial</div>
             </div>
             
             @* <table class="items">
@@ -76,7 +79,6 @@
         </div>
     </div>
 </div>
-
 
 <style>
     .ticket-wrapper

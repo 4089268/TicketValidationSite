@@ -8,6 +8,7 @@ public class TicketData
     public string RazonSocial { get; set; } = default!;
     public DateTime Fecha { get; set; }
     public decimal Total { get; set; }
+    public string Folio { get; set; } = default!;
     public string Hash { get; set; } = default!;
     public string Hash2 { get; set; } = default!;
 }
