@@ -1,4 +1,8 @@
-﻿<div class="row">
+﻿@using TicketValidationSite.Models
+@{
+    DatosEmpresa datosEmpres = new();
+}
+<div class="row">
     <div class="col-12 ticket-wrapper">
         <div class="ticket">
             <div class="invalid-overlay">INVÁLIDO</div>
@@ -9,10 +13,11 @@
                         <img src="~/img/caev.png" width="50" height="50" />
                     </div>
                     <div style="width: 100%;">
-                        <h1>COMISION DEL AGUA DEL ESTADO DE VERACRUZ</h1>
-                        <p>ABASOLO S/N, COL. CENTRO</br>
-                        CP. 95641, CD ISLA VERACRUZ</br>
-                        RFC. MV580101DL2 TEL. 283 8741183</p>
+                        <h1>@datosEmpres.RazonSocial</h1>
+                        <p>
+                            @datosEmpres.Direccion1</br>
+                            @datosEmpres.Direccion2
+                        </p>
                     </div>
                     <div>
                         <img src="~/img/veracruz-corazon.png" width="50" height="50" />
